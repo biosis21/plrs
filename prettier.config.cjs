@@ -1,0 +1,28 @@
+/** @type {import("prettier").Config} */
+module.exports = {
+  filepath: './**/*.{mdx,js,ts,tsx,cjs,mjs,json}',
+  arrowParens: 'always',
+  bracketSpacing: true,
+  jsxSingleQuote: false,
+  printWidth: 120,
+  quoteProps: 'as-needed',
+  semi: true,
+  singleQuote: true,
+  tabWidth: 2,
+  trailingComma: 'es5',
+  useTabs: false,
+  bracketSameLine: false,
+  importOrder: [
+    '^react$',
+    '<THIRD_PARTY_MODULES>',
+    '',
+    '^@/api(.*)$',
+    '^@/lib(.*)$',
+    '^@/contexts(.*)$',
+    '^@/components(.*)$',
+    '^@/types(.*)$',
+    '',
+    '^[./]',
+  ],
+  plugins: ['@ianvs/prettier-plugin-sort-imports'],
+};
